@@ -38,12 +38,17 @@ dayMean = aggregate(df$steps, list(df$date), mean, na.rm=TRUE)
 dayMedian = aggregate(df$steps, list(df$date), median, na.rm=TRUE)
 ```
 
-Below is the output for the mean number of steps taken per day. The median number of steps 
-taken per day was zero for all days. 
+Below is the output for the mean number of steps taken per day.
 
 ```{r}
 data.frame(Date = dayMean$Group.1, Mean = dayMean$x)
 ```
+
+And here is the output for the median number of steps:
+```{r}
+data.frame(Date = dayMedian$Group.1, Median = dayMedian$x)
+```
+
 
 ## What is the average daily activity pattern?
 
